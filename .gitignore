@@ -1,0 +1,6 @@
+uploads
+_config/config.envs.php
+_templates/default/_cache
+admin/_templates/_cache
+.idea/
+.svn/

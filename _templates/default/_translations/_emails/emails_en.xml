@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emails>
+<SendToFriend>
+<subject>
+I'm recommending you a job ad
+</subject>
+<message>
+<![CDATA[
+{BR}{BR}---{BR}You have received this e-mail from {YOUR_EMAIL}
+]]>
+</message>
+</SendToFriend>
+
+<ApplyOnline>
+<subject>
+[ {SITE_NAME} ] I wish to apply for {JOB_TITLE}
+</subject>
+<message>
+<![CDATA[
+{BR}{BR}---{BR}This e-mail is an application sent from {JOB_URL}
+]]>
+</message>
+</ApplyOnline>
+
+<PublishToAdmin>
+<newPostSubject>
+[ {SITE_NAME}  ] New job: {JOB_TITLE}
+</newPostSubject>
+<editedPostSubject>
+[ {SITE_NAME}  ] Edited job: {JOB_TITLE}
+</editedPostSubject>
+<message>
+<![CDATA[
+{JOB_URL}
+{BR} {JOB_TITLE} at {JOB_COMPANY}
+{BR} {JOB_DESCRIPTION}
+{BR} URL: {JOB_URL}
+{BR}---{BR} Published by: {JOB_POSTER_EMAIL}
+{BR}---{BR} Edit: {JOB_EDIT_URL}
+{BR} Delete: {JOB_DELETE_URL}
+{BR}{BR}---{BR} IP: {JOB_POSTER_IP}
+{BR} Date: {JOB_POST_DATE}
+]]>
+</message>
+<messageFirstPost>
+<![CDATA[
+Activate ad {JOB_ACTIVATE_URL}{BR}
+]]>
+</messageFirstPost>
+</PublishToAdmin>
+
+<PublishPendingToUser>
+<subject>
+仕事掲示板への投稿有難うございます / Your ad on {SITE_NAME}
+</subject>
+<message>
+<![CDATA[
+ご利用ありがとうございます。{BR}
+日本ワーキングホリデー協会です。{BR}{BR}
+さて、この度は、当協会のJobBoardへのご投稿有難うございます。{BR}
+ご投稿頂きました内容は、当協会で一度確認をさせて頂きますので、掲載開始まで今しばらくお待ちください。{BR}{BR}
+（通常、内容確認には３-４営業日を要します。）{BR}{BR}
+お手数をお掛け致しますが、どうぞ宜しくお願い致します。{BR}
+{BR}{BR}{BR}
+Hello! :){BR}
+This Is Japan Association for Working Holiday Makers.{BR}
+{BR}
+Thank you for using our Job Board.{BR}
+{BR}
+We need to check contents and sentences of your ad, so it will take about 3 to 4 business days before your ad will be published.{BR}
+When your ad is published, we will send you an e-mail!{BR}
+{BR}
+Thank you for using our service!{BR}
+{BR} Japan Association for Working Holiday Makers.
+{BR} job@jawhm.or.jp
+{BR} http://www.job-board.info/
+{BR} http://www.jawhm.or.jp
+]]>
+</message>
+</PublishPendingToUser>
+
+<PublishToUser>
+<subject>
+仕事掲示板への投稿有難うございます / Your ad on {SITE_NAME} was published 
+</subject>
+<message>
+<![CDATA[
+ご利用ありがとうございます。
+
+日本ワーキングホリデー協会でございます。
+
+
+この度は当協会のJobBoardをご活用頂きありがとうございます。
+{ACTIVE_EMAIL_MESSAGE}
+
+URL : {JOB_URL}
+JOB_ID : {JOB_ID}
+
+なお、投稿内容の変更・削除は以下ＵＲＬよりお願い致します。
+
+-----------------------------------
+変更及び削除 : {JOB_EDIT_URL}
+
+※上記URLが正しく機能しない場合は、お問い合わせフォームからご連絡ください。
+http://www.job-board.info/contact/
+-----------------------------------
+
+
+※JobBoardに関するアンケートにご協力をお願いします。
+https://jp.surveymonkey.com/r/2DNJ97Y
+
+もしJobBoardでの求人掲載を通して採用が確定した際は
+差し支えなければご一報いただけますようお願い申し上げます。
+
+今後もどうぞよろしくお願い致します。
+
+
+日本ワーキングホリデー協会
+
+====================
+
+Hello! :-)
+
+
+Your ad has been published and is available at {JOB_URL}
+You can edit or delete your ad by using URL below.
+
+---
+Edit or Delete it: {JOB_EDIT_URL}
+
+*If you have any question about your ad, contact us through Contact Form.
+http://www.job-board.info/contact/
+---
+
+If you accept employee by using our JobBoard, would you let us know about it if you don't mind.
+
+
+Thank you for using our service!
+
+
+Japan Association for Working Holiday Makers.
+
+====================
+
+E-mail : job@jawhm.or.jp
+
+JobBoard : http://www.job-board.info/
+
+JAWHM : http://www.jawhm.or.jp
+]]>
+</message>
+</PublishToUser>
+
+<ReportSpam>
+<subject>
+[SPAM on {SITE_NAME}] {JOB_TITLE}
+</subject>
+<message>
+<![CDATA[
+Following ad was reported as false/spam: {BR}---{BR}{BR}
+{JOB_URL}
+{BR}{BR} {JOB_TITLE} at {JOB_COMPANY}
+{BR}{BR} {JOB_DESCRIPTION}
+{BR}{BR}---{BR} Published by: {JOB_POSTER_EMAIL}
+{BR}---{BR}Edit: {JOB_EDIT_URL}
+{BR} Delete: {JOB_DELETE_URL}
+{BR}---{BR}IP: {JOB_POSTER_IP}
+{BR} Date: {JOB_POST_DATE}
+]]>
+</message>
+</ReportSpam>
+
+<Contact>
+<subject>
+[{SITE_NAME}] contact
+</subject>
+<message>
+<![CDATA[
+{BR}{BR}---{BR} Sent by: {SENDER_NAME} <{SENDER_EMAIL}>
+{BR} IP: {SENDER_IP}
+{BR} Date: {SEND_DATE}
+]]>
+</message>
+</Contact>
+    <!-- Nam cap nhat -->
+    <PostDateEnd>
+        <subject>
+            仕事掲示板の募集期間が過ぎました  Your Application was expired. 日本ワーキングホリデー協会　-JobBoard-
+        </subject>
+        <message>
+            <![CDATA[
+ご利用ありがとうございます。
+{BR}{BR}
+日本ワーキングホリデー協会でございます。
+
+{BR}{BR}
+この度は当協会のJobBoardをご活用頂きありがとうございます。
+{BR}
+以下の掲載内容について、設定された募集期間が過ぎましたのでご連絡いたします。
+募集期間を変更及び削除は、以下のＵＲＬから掲載内容の変更を行ってください。
+{BR}
+-----------------------------------
+{BR}
+変更及び削除 : {LINK_EDIT}
+{BR}
+※上記URLが正しく機能しない場合は、お問い合わせフォームからご連絡ください。{BR}
+http://www.job-board.info/contact/ {BR}
+-----------------------------------
+{BR}{BR}
+
+※JobBoardに関するアンケートにご協力をお願いします。{BR}
+https://jp.surveymonkey.com/r/2DNJ97Y
+{BR}{BR}
+もしJobBoardでの求人掲載を通して採用が確定した際は
+差し支えなければご一報いただけますようお願い申し上げます。
+{BR}{BR}
+今後もどうぞよろしくお願い致します。
+{BR}{BR}
+
+日本ワーキングホリデー協会
+{BR}{BR}
+====================
+{BR}{BR}
+Hello! :-)
+{BR}{BR}
+
+Your ad was expired  {LINK_PAGE}
+You can edit or delete your ad by using URL below.
+{BR}{BR}
+
+---
+{BR}{BR}
+Your ad was expired  {LINK_PAGE}{BR}
+You can edit or delete your ad by using URL below.{BR}{BR}
+---
+{BR}{BR}
+Edit or Delete it: {LINK_EDIT}{BR}
+*If you have any question about your ad, contact us throught Contact Form.{BR}
+http://www.job-board.info/contact/
+{BR}{BR}
+---
+{BR}{BR}
+If you accept employee by using our JobBoard, would you let us know about it if you don't mind.{BR}
+Thank you for using our service!{BR}
+Japan Association for Working Holiday Makers.{BR}{BR}
+====================
+{BR}{BR}
+E-mail : job@jawhm.or.jp{BR}
+JobBoard : http://www.job-board.info/{BR}
+JAWHM : http://www.jawhm.or.jp{BR}
+]]>
+        </message>
+    </PostDateEnd>
+    <!-- Nam cap nhat -->
+</emails>

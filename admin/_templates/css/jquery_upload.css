@@ -1,0 +1,104 @@
+#upload_image{
+    margin-top: 10px;
+}
+ input[type='button']{
+    background-image:none
+;
+}
+#upload_image .validation-error{
+    color: #ff0000;
+}
+#upload_image  form{
+    background-color:white;
+}
+#upload_image #maindiv{
+    width:960px; 
+    margin:10px auto; 
+    padding:10px;
+    font-family: 'Droid Sans', sans-serif;
+}
+#upload_image #formdiv{
+    width:500px; 
+    float:left; 
+    text-align: center;
+}
+#upload_image form{
+    padding: 40px 20px;
+    box-shadow: 0px 0px 10px;
+    border-radius: 2px;
+}
+#upload_image h2{
+    margin-left: 30px;
+}
+#upload_image .upload{
+    background-color:#09C;
+    border:1px solid #09C;
+    color:#fff;
+    border-radius:5px;
+    padding:10px;
+    /*text-shadow:1px 1px 0px white;*/
+    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+#upload_image .upload:hover{
+    cursor:pointer;
+    background:#0ae;
+    border:1px solid #0ae;
+    box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+}
+#upload_image #file{
+  width: 186px;
+  padding: 5px;
+  border: 1px dashed #123456;
+  background-color: #f9ffe5;
+  margin-top: 10px;
+  height: 60px;
+  text-align: center;
+  padding-top: 40px;
+}
+#upload_image #upload{
+    margin-left: 45px;
+}
+
+#upload_image #noerror{
+    color:green;
+    text-align: left;
+}
+#upload_image #error{
+    color:red;
+    text-align: left;
+}
+#upload_image  #img{ 
+    width: 17px;
+    border: none; 
+    height:17px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    cursor: pointer;
+}
+
+#upload_image .abcd{
+    text-align: center;
+    padding-left: 5px;
+    position: relative;
+    padding-top: 5px;
+}
+
+#upload_image .abcd img{
+  height: 100px;
+  width: 180px;
+  overflow: hidden;
+  padding: 5px;
+
+}
+#upload_image b{color:red;}
+#upload_image #formget{float:right;}
+#upload_image #filediv{width:200px;float:left;text-align:center;}
+#upload_image .div_upload1{	margin-left:205px;}
+#upload_image .div_upload2{	margin-left:70px;}
+#upload_image .div_upload3{	margin-left:5px;}
+#psubmit_upload{text-align:center;padding-top:10px !important;}
+#upload_image table{width:100%}
+#upload_image ul li{line-height:20px;}
+#delete_img{position: relative;top:5px;margin-left: 5px;cursor: pointer}
+.clear{clear:both}
