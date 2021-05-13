@@ -5,11 +5,16 @@
   <pre><code>cp config.envs-example.php config.envs.php</code></pre>    
   <p>3.3. Cập nhật config.envs.php</p>
   <pre><code>
-   	define('DB_NAME', 'kotanglish');
-	define('DB_USER', 'root');
-	define('DB_PASSWORD', 'abc123');
-	define('DB_HOST', 'db');
+	'prefix' => 'local.jobboard',
+	'db_host' => 'db',
+	'db_port' => 3306,
+	'db_user' => 'root', 
+	'db_password' => 'abc123',
+	'db_name' => 'jobboard',
+	// your site's full url
+	'app_url' => 'http://local.jobboard/',
   </code></pre>
+  
   <p>3.4. Tạo file docker-compose.yml với nội dung bên dưới<p>
   
   <pre><code>
