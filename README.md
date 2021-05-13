@@ -1,9 +1,9 @@
 ## Cài đặt môi trường Docker cho dự án job-board
-  <p>3.1. Pull code</p>
+  <p>1. Pull code</p>
   <pre><code>git clone ssh://gituser@jawhm.net:8822/var/lib/git/repository/jobboard.git</code></pre> 
-  <p>3.2. Di chuyển vào thư mục jobboard</p>
-  <pre><code>cd jobboard</code></pre>    
-  <p>3.3. Cập nhật wp-config.php</p>
+  <p>2. Tạo file config.envs.php</p>
+  <pre><code>cp config.envs-example.php config.envs.php</code></pre>    
+  <p>3.3. Cập nhật config.envs.php</p>
   <pre><code>
    	define('DB_NAME', 'kotanglish');
 	define('DB_USER', 'root');
