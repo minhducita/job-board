@@ -5,6 +5,7 @@
   <pre><code>cp config.envs-example.php config.envs.php</code></pre>    
   <p>3.3. Cập nhật config.envs.php</p>
   <pre><code>
+  	// should be a unique part of the url (or the entire url if you wish)
 	'prefix' => 'local.jobboard',
 	'db_host' => 'db',
 	'db_port' => 3306,
