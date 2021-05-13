@@ -14,27 +14,27 @@
   
   <pre><code>
     version: "3.3"
-    services:
-        app:
-            ports:
-                - 8082:80
-            image: wordpress:php7.3
-            container_name: kotanglish
-            volumes:
-                - ./:/var/www/html
-            networks:
-                - network_nginx_proxy
-                - network_2
-            restart: always
-            environment: 
-                VIRTUAL_HOST: "local.kotanglish"
-    networks:
-        network_nginx_proxy:
-            external: 
-                name: nginx-proxy
-        network_2:
-            external: 
-                name: dbshared
+services:
+    app:
+        ports:
+            - 8084:80
+        image: "plutonianbe/php54-apache:latest"
+        container_name: jobboard
+        volumes:
+            - ./:/var/www/html
+        networks:
+            - network_nginx_proxy
+            - network_2
+        restart: always
+        environment: 
+            VIRTUAL_HOST: "local.jobboard"
+networks:
+    network_nginx_proxy:
+        external: 
+            name: nginx-proxy
+    network_2:
+        external: 
+            name: dbshared
   </code></pre>
   
   
