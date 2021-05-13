@@ -3,7 +3,7 @@
   <pre><code>git clone ssh://gituser@jawhm.net:8822/var/lib/git/repository/jobboard.git</code></pre> 
   <p>2. Tạo file config.envs.php</p>
   <pre><code>cp config.envs-example.php config.envs.php</code></pre>    
-  <p>3.3. Cập nhật config.envs.php</p>
+  <p>3. Cập nhật config.envs.php</p>
   <pre><code>
   	// should be a unique part of the url (or the entire url if you wish)
 	'prefix' => 'local.jobboard',
@@ -16,31 +16,31 @@
 	'app_url' => 'http://local.jobboard/',
   </code></pre>
   
-  <p>3.4. Tạo file docker-compose.yml với nội dung bên dưới<p>
+  <p>4. Tạo file docker-compose.yml với nội dung bên dưới<p>
   
   <pre><code>
-    version: "3.3"
-services:
-    app:
-        ports:
-            - 8084:80
-        image: "plutonianbe/php54-apache:latest"
-        container_name: jobboard
-        volumes:
-            - ./:/var/www/html
-        networks:
-            - network_nginx_proxy
-            - network_2
-        restart: always
-        environment: 
-            VIRTUAL_HOST: "local.jobboard"
-networks:
-    network_nginx_proxy:
-        external: 
-            name: nginx-proxy
-    network_2:
-        external: 
-            name: dbshared
+    	version: "3.3"
+	services:
+	    app:
+		ports:
+		    - 8084:80
+		image: "plutonianbe/php54-apache:latest"
+		container_name: jobboard
+		volumes:
+		    - ./:/var/www/html
+		networks:
+		    - network_nginx_proxy
+		    - network_2
+		restart: always
+		environment: 
+		    VIRTUAL_HOST: "local.jobboard"
+	networks:
+	    network_nginx_proxy:
+		external: 
+		    name: nginx-proxy
+	    network_2:
+		external: 
+            	name: dbshared
   </code></pre>
   
   
@@ -52,4 +52,5 @@ networks:
 - Nhập nội dung <code>192.168.1.99 local.jobboard</code> vào cuối file host và lưu lại.
 <i><b>Lưu ý:</b> Thay đổi dịa chỉ ip <code>192.168.1.99</code> bằng địa chỉ ip server của bạn</i>
 <p>Lúc này từ trình duyệt ở máy host, có thể truy cập đến Webserver máy ảo bằng địa chỉ <code>local.jobboard</code>.</p>
-
+ 
+<p>Truy cập vào trang quản trị: http://local.jobboard/admin/ với User/Pass tương ứng trong database của bạn.</p>
