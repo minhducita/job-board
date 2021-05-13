@@ -1,8 +1,8 @@
 ## Cài đặt môi trường Docker cho dự án job-board
   <p>3.1. Pull code</p>
-  <pre><code>git clone https://github.com/minhducita/kotanglish.git</code></pre> 
-  <p>3.2. Di chuyển vào thư mục kotanglish</p>
-  <pre><code>cd kotanglish</code></pre>    
+  <pre><code>git clone ssh://gituser@jawhm.net:8822/var/lib/git/repository/jobboard.git</code></pre> 
+  <p>3.2. Di chuyển vào thư mục jobboard</p>
+  <pre><code>cd jobboard</code></pre>    
   <p>3.3. Cập nhật wp-config.php</p>
   <pre><code>
    	define('DB_NAME', 'kotanglish');
