@@ -51,6 +51,10 @@
 <pre><code>C:\Windows\System32\drivers\etc.</code></pre>
 - Nhập nội dung <code>192.168.1.99 local.jobboard</code> vào cuối file host và lưu lại.
 <i><b>Lưu ý:</b> Thay đổi dịa chỉ ip <code>192.168.1.99</code> bằng địa chỉ ip server của bạn</i>
-<p>Lúc này từ trình duyệt ở máy host, có thể truy cập đến Webserver máy ảo bằng địa chỉ <code>local.jobboard</code>.</p>
- 
+<p>Cập nhật lại setting domain trong database của bạn ở table kg_options</p>
+<pre><code>
+	siteurl	= http://kotanglish.bluecloudvn.com
+	home	= http://kotanglish.bluecloudvn.com
+</code></pre>
+<p>Lúc này từ trình duyệt ở máy host, có thể truy cập đến Webserver máy ảo bằng địa chỉ <code>local.jobboard</code>.</p> 
 <p>Truy cập vào trang quản trị: http://local.jobboard/admin/ với User/Pass tương ứng trong database của bạn.</p>
