@@ -69,25 +69,25 @@
     	version: "3.3"
 	services:
 	    app:
-		ports:
-		    - 8084:80
-		image: "plutonianbe/php54-apache:latest"
 		container_name: jobboard
+		ports:
+		    - ${DOCKER_PORT}:80
+		build: ./docker
 		volumes:
 		    - ./:/var/www/html
 		networks:
 		    - network_nginx_proxy
 		    - network_2
 		restart: always
-		environment: 
-		    VIRTUAL_HOST: "local.jobboard"
+		env_file:
+		    - ./.env
 	networks:
 	    network_nginx_proxy:
 		external: 
 		    name: nginx-proxy
 	    network_2:
 		external: 
-            	name: dbshared
+		    name: dbshared
   </code></pre>
   
   
