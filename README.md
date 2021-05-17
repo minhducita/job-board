@@ -32,22 +32,9 @@
 	APP_URL="http://jobboard.jawhm.org/"
   </code></pre>
   
-   <p>5. Xóa dòng 21 <pre><code> && empty(strpos($_SERVER['REQUEST_URI'], 'joke-board'))</code></pre> ở file jobboard/index.php </p>
-  <pre><code>
-	# Env Docker
-	DOCKER_PORT=8004
-	VIRTUAL_HOST="jobboard.jawhm.org"
-	# DB
-	DB_HOST="db"
-	DB_NAME="jobboard"
-	DB_USER="jobboard"
-	DB_PASSWORD="J(-dA9Y!BRDX2va!"
-	PREFIX="jobboard.jawhm.org"
-	APP_URL="http://jobboard.jawhm.org/"
-  </code></pre>
+  <p>6. Xóa dòng 21 <pre><code> && empty(strpos($_SERVER['REQUEST_URI'], 'joke-board'))</code></pre> ở file jobboard/index.php </p>
   
-  
-  <p>6. Tạo file Dockerfile trong thư mục jobboard/docker<p>
+  <p>7. Tạo file Dockerfile trong thư mục jobboard/docker<p>
   
   <pre><code>
     	FROM php:5.4-apache
@@ -76,7 +63,7 @@
   
   <p>Sau đó khởi động container bằng lệnh</p>
   
-  <p>7. Tạo file docker-compose.yml với nội dung bên dưới<p>
+  <p>8. Tạo file docker-compose.yml với nội dung bên dưới<p>
   
   <pre><code>
     	version: "3.3"
