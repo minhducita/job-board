@@ -15,6 +15,22 @@
 	// your site's full url
 	'app_url' => 'http://local.jobboard/',
   </code></pre>
+   
+  <p>4. Tạo file config.envs.php</p>
+  <pre><code>cp config.envs-example.php config.envs.php</code></pre>    
+  <p>5. Cập nhật config.envs.php</p>
+  <pre><code>
+	# Env Docker
+	DOCKER_PORT=8004
+	VIRTUAL_HOST="jobboard.jawhm.org"
+	# DB
+	DB_HOST="db"
+	DB_NAME="jobboard"
+	DB_USER="jobboard"
+	DB_PASSWORD="J(-dA9Y!BRDX2va!"
+	PREFIX="jobboard.jawhm.org"
+	APP_URL="http://jobboard.jawhm.org/"
+  </code></pre>
   
   <p>4. Tạo file docker-compose.yml với nội dung bên dưới<p>
   
