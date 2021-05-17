@@ -1,7 +1,7 @@
 ## Cài đặt môi trường Docker cho dự án job-board
   <p>1. Pull code</p>
   <pre><code>git clone ssh://gituser@jawhm.net:8822/var/lib/git/repository/jobboard.git</code></pre> 
-  <p>2. Tạo file config.envs.php</p>
+  <p>2. Tạo file config.envs.php trong thư mục _config</p>
   <pre><code>cp config.envs-example.php config.envs.php</code></pre>    
   <p>3. Cập nhật config.envs.php</p>
   <pre><code>
@@ -16,9 +16,9 @@
 	'app_url' => 'http://local.jobboard/',
   </code></pre>
    
-  <p>4. Tạo file config.envs.php</p>
-  <pre><code>cp config.envs-example.php config.envs.php</code></pre>    
-  <p>5. Cập nhật config.envs.php</p>
+  <p>4. Tạo file .env ngoài thư mục jobboard</p>
+  <pre><code>cp .env-example.php .env</code></pre>    
+  <p>5. Cập nhật nội dung file .env như sau:</p>
   <pre><code>
 	# Env Docker
 	DOCKER_PORT=8004
@@ -32,7 +32,51 @@
 	APP_URL="http://jobboard.jawhm.org/"
   </code></pre>
   
-  <p>4. Tạo file docker-compose.yml với nội dung bên dưới<p>
+   <p>5. Xóa dòng 21 <pre><code> && empty(strpos($_SERVER['REQUEST_URI'], 'joke-board'))</code></pre> ở file jobboard/index.php </p>
+  <pre><code>
+	# Env Docker
+	DOCKER_PORT=8004
+	VIRTUAL_HOST="jobboard.jawhm.org"
+	# DB
+	DB_HOST="db"
+	DB_NAME="jobboard"
+	DB_USER="jobboard"
+	DB_PASSWORD="J(-dA9Y!BRDX2va!"
+	PREFIX="jobboard.jawhm.org"
+	APP_URL="http://jobboard.jawhm.org/"
+  </code></pre>
+  
+  
+  <p>6. Tạo file Dockerfile trong thư mục jobboard/docker<p>
+  
+  <pre><code>
+    	FROM php:5.4-apache
+	# 1. Add php.ini, 000-default.conf to ubuntu folder
+	#ADD php.ini /usr/local/etc/php
+	# ADD 000-default.conf /etc/apache2/sites-enabled/
+
+	# 2. Install Development Packages
+	RUN apt-get update \
+		&& apt-get install -y \
+		git \
+		zip \
+		curl \
+		unzip \
+		vim \
+		libpng-dev \
+		libpq-dev
+
+	# 3. Install php extension
+	RUN docker-php-ext-install mysqli
+
+	# 4. Disable modRewrite for Laravel
+	RUN a2enmod rewrite
+
+  </code></pre>
+  
+  <p>Sau đó khởi động container bằng lệnh</p>
+  
+  <p>7. Tạo file docker-compose.yml với nội dung bên dưới<p>
   
   <pre><code>
     	version: "3.3"
